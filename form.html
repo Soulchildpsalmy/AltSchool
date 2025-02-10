@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>APPLICATION FORM</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 20px 15px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 15px;
+      padding: 10px 15px;
+      border: 1px solid #333;
+      border-radius: 3px;
+      font-weight: 100;
+    }
+
+    nav a:hover {
+      color: white;
+      background-color: #333;
+      border: none;
+    }
+
+    .assignment-card {
+      background-color: #e6e6e6;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+    }
+
+    @media (max-width: 842px) {
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+      }
+
+      nav a {
+        white-space: nowrap;
+        border: none;
+      }
+    }
+
+    @media (max-width: 470px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 10px;
+      }
+    }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Go Home</a>
+    <a href="aboutme.html">View About Me assigment</a>
+    <a href="form.html" class="assignment-card">View form assigment</a>
+    <a href="table.html" class="assignment-card">View table assignment</a>
+  </nav>
+  <header>
+    <h1>Sign up</h1>
+    <p>Take the next steps to apply at AltSchool Africa</p>
+  </header>
+  <section>
+   <form action="/submit" method="post">
+      <label for="firstname">First Name</label><br>
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" required><br><br>
+    
+      <label for="lastname">Last Name</label><br>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+    
+      <label for="dateOfBirth">Date of Birth</label><br>
+      <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>
+    
+      <label for="gender">Gender</label><br>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select><br><br>
+
+      <label for="phonenumber">Phone Number</label><br>
+      <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number" required><br><br>
+
+      <label for="countryOfResidence">Country of Residence</label><br>
+      <input type="text" id="countryOfResidence" name="countryOfResidence" placeholder="Country of Residence" required><br><br>
+
+      <label for="stateOfResidence">State of Residence</label><br>
+      <input type="text" id="stateOfResidence" name="stateOfResidence" placeholder="State of Residence" required><br><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" minlength="3" maxlength="16" placeholder="Password" required><br><br>
+
+      <label for="confirmPassword">Confirm Password</label><br>
+      <input type="password" id="Confirm Password" name="confirmPassword" minlength="3" maxlength="16" placeholder="Confirm Password" required><br><br>
+
+      <label for="channel">How did you hear about us?</label><br>
+      <input type="text" id="channel" name="channel" placeholder="Optional: Let us know how you found us" size="40"><br><br>
+
+      <label for="terms">By clicking continue, I agree to <a href="#">Terms of Use</a> and acknowledge that I have read the <a href="#">Privacy Policy</a>.</label><br><br>
+      <input type="submit" value="Sign Up">
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Uyime Oku. All rights reserved.</p>
+</footer>
+</body>
+</html>

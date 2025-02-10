@@ -1,0 +1,680 @@
+WEBVTT
+
+00:00:00.080 --> 00:00:03.120
+this is css in just five minutes i'll
+
+00:00:03.120 --> 00:00:05.040
+explain css how i understand it
+
+00:00:05.040 --> 00:00:06.720
+and the parts of it that i use the most
+
+00:00:06.720 --> 00:00:08.320
+as a full stack developer
+
+00:00:08.320 --> 00:00:10.719
+you can write css directly in html like
+
+00:00:10.719 --> 00:00:11.360
+this or
+
+00:00:11.360 --> 00:00:15.120
+this but it's best to use a css file
+
+00:00:15.120 --> 00:00:17.840
+css just has two easy pieces selectors
+
+00:00:17.840 --> 00:00:18.880
+and attributes
+
+00:00:18.880 --> 00:00:21.680
+selectors say hey search my html for
+
+00:00:21.680 --> 00:00:22.800
+elements that match
+
+00:00:22.800 --> 00:00:26.080
+this you can select by element like h1
+
+00:00:26.080 --> 00:00:29.439
+classes with a dot an id with a hash
+
+00:00:29.439 --> 00:00:31.760
+or chain multiple together chaining with
+
+00:00:31.760 --> 00:00:32.960
+a comma just means
+
+00:00:32.960 --> 00:00:35.920
+select this and this the space syntax
+
+00:00:35.920 --> 00:00:37.280
+means inside
+
+00:00:37.280 --> 00:00:39.760
+of the carrot selects one level deep
+
+00:00:39.760 --> 00:00:41.600
+that is headers just one level deep
+
+00:00:41.600 --> 00:00:43.040
+inside that class
+
+00:00:43.040 --> 00:00:44.480
+keeping your selectors as simple as
+
+00:00:44.480 --> 00:00:46.960
+possible like a single class name
+
+00:00:46.960 --> 00:00:49.360
+are the best case scenario once you've
+
+00:00:49.360 --> 00:00:50.960
+got things selected you need to add some
+
+00:00:50.960 --> 00:00:51.840
+attributes
+
+00:00:51.840 --> 00:00:53.600
+now attributes are the actual styles we
+
+00:00:53.600 --> 00:00:55.360
+apply and these styles get applied from
+
+00:00:55.360 --> 00:00:58.000
+the top to the bottom of your css file
+
+00:00:58.000 --> 00:00:59.440
+now it's not quite that simple because
+
+00:00:59.440 --> 00:01:01.680
+what if we have two conflicting styles
+
+00:01:01.680 --> 00:01:02.960
+well to resolve that there's something
+
+00:01:02.960 --> 00:01:05.280
+called specificity more specific
+
+00:01:05.280 --> 00:01:07.520
+selectors get priorities so it goes from
+
+00:01:07.520 --> 00:01:08.080
+id
+
+00:01:08.080 --> 00:01:10.640
+down to class down to broad elements
+
+00:01:10.640 --> 00:01:12.000
+when you chain selectors together
+
+00:01:12.000 --> 00:01:14.159
+it gets really complicated but you'll
+
+00:01:14.159 --> 00:01:16.320
+get a feel for this over time
+
+00:01:16.320 --> 00:01:17.680
+there are two really big categories
+
+00:01:17.680 --> 00:01:19.280
+color and layout and then a ton of
+
+00:01:19.280 --> 00:01:20.960
+different random properties
+
+00:01:20.960 --> 00:01:22.720
+two common things we set color on are
+
+00:01:22.720 --> 00:01:24.880
+backgrounds and text
+
+00:01:24.880 --> 00:01:27.119
+we use the background hyphen color and
+
+00:01:27.119 --> 00:01:28.000
+color keys
+
+00:01:28.000 --> 00:01:30.079
+respectively and then fill in attribute
+
+00:01:30.079 --> 00:01:31.520
+values like red
+
+00:01:31.520 --> 00:01:33.759
+cornflower blue or sky blue these color
+
+00:01:33.759 --> 00:01:35.439
+words are easy to read but limited so
+
+00:01:35.439 --> 00:01:37.680
+more often you'll use a hex code
+
+00:01:37.680 --> 00:01:39.119
+you can find colors you like around the
+
+00:01:39.119 --> 00:01:40.640
+internet and then get the hex with a
+
+00:01:40.640 --> 00:01:42.560
+color picker extension
+
+00:01:42.560 --> 00:01:44.320
+now for layout attributes which is all
+
+00:01:44.320 --> 00:01:46.159
+based on the box model
+
+00:01:46.159 --> 00:01:48.240
+everything is a box inside of a box each
+
+00:01:48.240 --> 00:01:50.000
+box is made up of content padding
+
+00:01:50.000 --> 00:01:52.720
+border and margin i'll set some values
+
+00:01:52.720 --> 00:01:54.479
+for these and then explain them
+
+00:01:54.479 --> 00:01:56.159
+we can see the box model over in chrome
+
+00:01:56.159 --> 00:01:58.560
+on any page which allows us to check the
+
+00:01:58.560 --> 00:02:00.399
+values and debug if things are being
+
+00:02:00.399 --> 00:02:01.439
+weird
+
+00:02:01.439 --> 00:02:03.520
+the blue part is content which we set in
+
+00:02:03.520 --> 00:02:04.479
+css as
+
+00:02:04.479 --> 00:02:06.799
+width and height width and height are
+
+00:02:06.799 --> 00:02:08.878
+best to set as percentages of the parent
+
+00:02:08.878 --> 00:02:09.919
+container
+
+00:02:09.919 --> 00:02:12.160
+otherwise everything gets messed up and
+
+00:02:12.160 --> 00:02:14.160
+can go out of bounds
+
+00:02:14.160 --> 00:02:16.239
+you can position things within this blue
+
+00:02:16.239 --> 00:02:17.360
+content box with
+
+00:02:17.360 --> 00:02:20.239
+text align center left or right the
+
+00:02:20.239 --> 00:02:21.680
+padding attribute can throw people off
+
+00:02:21.680 --> 00:02:22.000
+because
+
+00:02:22.000 --> 00:02:23.920
+you can write either one two or four
+
+00:02:23.920 --> 00:02:26.239
+values that's because you can set top
+
+00:02:26.239 --> 00:02:28.160
+right bottom and left individually
+
+00:02:28.160 --> 00:02:31.040
+or top and bottom left and right or all
+
+00:02:31.040 --> 00:02:32.239
+four sides
+
+00:02:32.239 --> 00:02:33.760
+if you're writing four remember by going
+
+00:02:33.760 --> 00:02:36.000
+clockwise first top then right bottom
+
+00:02:36.000 --> 00:02:38.239
+left you can also set aside individually
+
+00:02:38.239 --> 00:02:39.200
+like so
+
+00:02:39.200 --> 00:02:41.440
+margin top padding left you get it it's
+
+00:02:41.440 --> 00:02:42.560
+important to know that your element's
+
+00:02:42.560 --> 00:02:43.440
+background color
+
+00:02:43.440 --> 00:02:44.879
+will get applied to padding but not
+
+00:02:44.879 --> 00:02:46.480
+border margin we've set this padding
+
+00:02:46.480 --> 00:02:47.920
+with pixel values but you can also make
+
+00:02:47.920 --> 00:02:48.560
+it rem
+
+00:02:48.560 --> 00:02:51.840
+or rem rem is relative to the base font
+
+00:02:51.840 --> 00:02:52.879
+size so if you
+
+00:02:52.879 --> 00:02:55.680
+change the base font size it will change
+
+00:02:55.680 --> 00:02:56.480
+the spacing of
+
+00:02:56.480 --> 00:02:58.560
+everything this can be useful for
+
+00:02:58.560 --> 00:03:00.560
+responsive designs
+
+00:03:00.560 --> 00:03:01.840
+next up border which is the border
+
+00:03:01.840 --> 00:03:03.360
+between padding and margin and has a
+
+00:03:03.360 --> 00:03:04.560
+three part syntax
+
+00:03:04.560 --> 00:03:07.040
+size type and color 99 of the time
+
+00:03:07.040 --> 00:03:08.640
+you're just going to be using solid for
+
+00:03:08.640 --> 00:03:09.200
+the type
+
+00:03:09.200 --> 00:03:10.959
+and the color rules work the same as for
+
+00:03:10.959 --> 00:03:13.280
+other stuff finally margin which is on
+
+00:03:13.280 --> 00:03:14.480
+the outside of our box
+
+00:03:14.480 --> 00:03:16.400
+and works exactly the same as padding
+
+00:03:16.400 --> 00:03:17.840
+with the one to four value
+
+00:03:17.840 --> 00:03:19.920
+syntax our background color will not
+
+00:03:19.920 --> 00:03:21.920
+extend into the margin
+
+00:03:21.920 --> 00:03:24.080
+okay that's the box model next up the
+
+00:03:24.080 --> 00:03:25.120
+display property
+
+00:03:25.120 --> 00:03:27.519
+use inline for a continuous line and
+
+00:03:27.519 --> 00:03:29.120
+block to space things out
+
+00:03:29.120 --> 00:03:31.280
+or inline block if you still want the
+
+00:03:31.280 --> 00:03:33.040
+benefits of both being able to set the
+
+00:03:33.040 --> 00:03:34.000
+top and bottom
+
+00:03:34.000 --> 00:03:38.480
+padding but still have the same line
+
+00:03:38.480 --> 00:03:40.560
+display flex and grid deserve entire
+
+00:03:40.560 --> 00:03:42.080
+videos of their own
+
+00:03:42.080 --> 00:03:44.159
+you can specify an exact grid which is
+
+00:03:44.159 --> 00:03:45.200
+great for building
+
+00:03:45.200 --> 00:03:48.319
+based on a design or ux wireframe for
+
+00:03:48.319 --> 00:03:50.239
+general purpose and spacing as you go
+
+00:03:50.239 --> 00:03:52.319
+display flex is amazing and it's my
+
+00:03:52.319 --> 00:03:53.760
+go-to
+
+00:03:53.760 --> 00:03:55.360
+it's easy to center horizontally and
+
+00:03:55.360 --> 00:03:57.120
+vertically with the align items and
+
+00:03:57.120 --> 00:03:58.840
+justify content
+
+00:03:58.840 --> 00:04:01.280
+properties you can put things in custom
+
+00:04:01.280 --> 00:04:03.040
+places too by setting position relative
+
+00:04:03.040 --> 00:04:05.360
+on the parent and absolute on the child
+
+00:04:05.360 --> 00:04:06.799
+then we set the top left bottom and
+
+00:04:06.799 --> 00:04:08.319
+right values which can also be
+
+00:04:08.319 --> 00:04:09.920
+percentages
+
+00:04:09.920 --> 00:04:11.439
+now back to selectors for a minute we
+
+00:04:11.439 --> 00:04:12.879
+also have pseudo classes which you can
+
+00:04:12.879 --> 00:04:14.319
+add with a colon
+
+00:04:14.319 --> 00:04:15.760
+most common is probably hover which
+
+00:04:15.760 --> 00:04:17.759
+works a bit like this
+
+00:04:17.759 --> 00:04:19.199
+a different set of styles for when your
+
+00:04:19.199 --> 00:04:21.199
+mouse is over the element and to make it
+
+00:04:21.199 --> 00:04:22.400
+a smooth transition we can add the
+
+00:04:22.400 --> 00:04:24.080
+transition property which takes the time
+
+00:04:24.080 --> 00:04:25.120
+and bezier curve
+
+00:04:25.120 --> 00:04:28.639
+value we can also make this button move
+
+00:04:28.639 --> 00:04:30.000
+on hover with the extremely cool
+
+00:04:30.000 --> 00:04:31.360
+transform property
+
+00:04:31.360 --> 00:04:32.560
+there are other pseudo classes that
+
+00:04:32.560 --> 00:04:34.080
+allow you to select an element kind of
+
+00:04:34.080 --> 00:04:35.600
+like we were doing with the space and
+
+00:04:35.600 --> 00:04:36.320
+carrot
+
+00:04:36.320 --> 00:04:38.160
+a couple examples are first child and
+
+00:04:38.160 --> 00:04:40.000
+child but again keep it simpler than
+
+00:04:40.000 --> 00:04:41.759
+this whenever you can
+
+00:04:41.759 --> 00:04:43.759
+we didn't cover font family or font size
+
+00:04:43.759 --> 00:04:45.919
+but these are pretty self-explanatory
+
+00:04:45.919 --> 00:04:47.520
+you'll always see more than one font for
+
+00:04:47.520 --> 00:04:49.040
+font family just in case the first one
+
+00:04:49.040 --> 00:04:49.840
+doesn't work
+
+00:04:49.840 --> 00:04:51.600
+we did cover background color but you
+
+00:04:51.600 --> 00:04:52.960
+can also set a ton more background
+
+00:04:52.960 --> 00:04:55.040
+properties like background image
+
+00:04:55.040 --> 00:04:57.199
+and you can use the shorthand background
+
+00:04:57.199 --> 00:04:59.759
+syntax to put these all in one line
+
+00:04:59.759 --> 00:05:01.600
+other cool attributes include shadows
+
+00:05:01.600 --> 00:05:03.440
+like box shadow and drop shadow and
+
+00:05:03.440 --> 00:05:05.199
+i usually use a box shadow or drop
+
+00:05:05.199 --> 00:05:06.880
+shadow generator for this
+
+00:05:06.880 --> 00:05:08.160
+you can play around with the options and
+
+00:05:08.160 --> 00:05:10.320
+then just copy the css here
+
+00:05:10.320 --> 00:05:12.320
+just google box shadow generator to find
+
+00:05:12.320 --> 00:05:14.080
+this by the way you'll notice these
+
+00:05:14.080 --> 00:05:15.919
+things called vendor prefixes
+
+00:05:15.919 --> 00:05:17.680
+in front of the box shadow property
+
+00:05:17.680 --> 00:05:19.520
+these are used for new or experimental
+
+00:05:19.520 --> 00:05:21.680
+attributes that get added to css
+
+00:05:21.680 --> 00:05:23.680
+at this point box shadow is not new at
+
+00:05:23.680 --> 00:05:25.199
+all though so it's just for backwards
+
+00:05:25.199 --> 00:05:26.160
+compatibility
+
+00:05:26.160 --> 00:05:28.560
+with older browsers my rule of thumb is
+
+00:05:28.560 --> 00:05:30.160
+to use them if they're included in the
+
+00:05:30.160 --> 00:05:32.000
+documentation for that attribute
+
+00:05:32.000 --> 00:05:34.080
+but otherwise just leave them out you
+
+00:05:34.080 --> 00:05:35.919
+can create animations with keyframe and
+
+00:05:35.919 --> 00:05:38.479
+the animation property and it's usually
+
+00:05:38.479 --> 00:05:41.280
+better to just google css animation
+
+00:05:41.280 --> 00:05:43.360
+and then whatever you want and you'll be
+
+00:05:43.360 --> 00:05:45.360
+able to find one pretty easily
+
+00:05:45.360 --> 00:05:47.199
+just like background animation has a
+
+00:05:47.199 --> 00:05:49.120
+short hand property too
+
+00:05:49.120 --> 00:05:51.039
+lastly we have media queries which allow
+
+00:05:51.039 --> 00:05:52.560
+us to style for mobile and different
+
+00:05:52.560 --> 00:05:54.080
+screen sizes
+
+00:05:54.080 --> 00:05:55.600
+these are triggered by break points
+
+00:05:55.600 --> 00:05:57.520
+which are kind of like if statements so
+
+00:05:57.520 --> 00:06:00.080
+if the width is wider than a certain
+
+00:06:00.080 --> 00:06:00.960
+amount of pixels
+
+00:06:00.960 --> 00:06:03.199
+then the style gets applied and you can
+
+00:06:03.199 --> 00:06:05.039
+use your browser developer tools to test
+
+00:06:05.039 --> 00:06:06.960
+this out
+
+00:06:06.960 --> 00:06:09.440
+okay what else is there with css well
+
+00:06:09.440 --> 00:06:11.600
+you have preprocessors the common one is
+
+00:06:11.600 --> 00:06:15.120
+scss or sas which gives you more syntax
+
+00:06:15.120 --> 00:06:16.160
+variables nested
+
+00:06:16.160 --> 00:06:18.240
+properties but it doesn't do anything
+
+00:06:18.240 --> 00:06:20.800
+normal css can't finally in frameworks
+
+00:06:20.800 --> 00:06:22.160
+like react you will see
+
+00:06:22.160 --> 00:06:25.199
+css in javascript which is also called
+
+00:06:25.199 --> 00:06:27.600
+a styled component pattern and the line
+
+00:06:27.600 --> 00:06:28.240
+between
+
+00:06:28.240 --> 00:06:30.720
+javascript css and html really gets
+
+00:06:30.720 --> 00:06:31.440
+blurred here
+
+00:06:31.440 --> 00:06:33.039
+don't worry too much about these styled
+
+00:06:33.039 --> 00:06:34.960
+components are very similar to regular
+
+00:06:34.960 --> 00:06:35.759
+css
+
+00:06:35.759 --> 00:06:38.960
+and get converted to css at compile time
+
+00:06:38.960 --> 00:06:40.880
+whether you're already a css pro or
+
+00:06:40.880 --> 00:06:42.240
+you're just an inspiring front-end
+
+00:06:42.240 --> 00:06:42.960
+developer
+
+00:06:42.960 --> 00:06:45.919
+i hope this was a helpful summary of css
+
+00:06:45.919 --> 00:06:47.360
+like if you learned something and if you
+
+00:06:47.360 --> 00:06:48.639
+want to become a remote software
+
+00:06:48.639 --> 00:06:49.360
+developer
+
+00:06:49.360 --> 00:07:03.840
+subscribe for more content like this
+
+00:08:15.759 --> 00:08:17.840
+you
+
